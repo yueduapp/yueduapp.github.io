@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【内置小说源】真正免费的小说app悦读v3.24.11.22 - 内置书源阅读神器</title>
+    <meta name="description" content="一款免费的小说阅读APP，全部小说免费，无广告。小说类别包含：玄幻，奇幻，言情，都市，仙侠，悬疑，科幻，爽文，现实等。作品有：斗破穹苍，斗罗大陆，剑来，完美世界，三体等等。">
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --secondary-color: #607D8B;
+        }
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        body {
+            margin: 0;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+        /* 优化头部样式 */
+        header {
+            background: linear-gradient(135deg, #1976D2 0%, #2196F3 100%);
+            box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav {
+            height: 72px;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .nav h1::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 32px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMi4yNSAyLjI1aDE5LjV2MTkuNUgyLjI1VjIuMjV6bTE4LjM2IDQuMjR2MTEuMDJhLjc1Ljc1IDAgMCAxLS40MjQuNjY4bC01LjgxIDMuMjQzYTIuMjUgMi4yNSAwIDAgMS0yLjI5MiAwbC01LjgxLTMuMjQzYS43NS43NSAwIDAgMS0uNDI0LS42NjhWNi40OWwxNi4yNS0uMDAxem0tNS44NyA0LjQ5OGEuNzUuNzUgMCAwMC0xLjA2IDBsLTIuOTcgMi45Ny0xLjQ3LTEuNDdhLjc1Ljc1IDAgMTAtMS4wNiAxLjA2bDIgMmEuNzUuNzUgMCAwMDEuMDYgMGwzLjUtMy41YS43NS43NSAwIDAwMC0xLjA2eiIvPjwvc3ZnPg==') no-repeat center;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-1px);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+            color: white;
+        }
+        .screenshot-container {
+            width: 80%;
+            max-width: 800px;
+            height: 450px;
+            margin: 2rem auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .screenshot {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .screenshot:hover {
+            transform: scale(1.03);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .btn-download {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            background: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+        }
+        @media (max-width: 768px) {
+            .nav {
+                padding: 0 1rem;
+                height: 60px;
+            }
+            .nav h1 {
+                font-size: 1.5rem;
+            }
+            .nav h1::before {
+                width: 24px;
+                height: 24px;
+            }
+            .download-buttons {
+                flex-direction: column;
+            }
+            .screenshot-container {
+                width: 90%;
+                height: 300px;
+            }
+        }
+        @media (max-width: 480px) {
+            .screenshot-container {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav container">
+            <h1>
+                <span>悦读</span>
+            </h1>
+            <div class="nav-links">
+                <a href="#features">功能特性</a>
+                <a href="#download">下载</a>
+                <a href="https://pan.quark.cn/s/e79bad038184">软件合集</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 style="font-size: 2.5rem">您的随身阅读神器</h1>
+            <p>内置3000+书源 | 纯净无广告 | 全平台适配</p>
+            <div class="screenshot-container">
+                <img src="yuedu.jpg" alt="软件界面截图" class="screenshot">
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="features">
+        <h2>核心功能</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>📚 智能书源管理</h3>
+                <p>预装精选书源，自动更新维护<sup>[2][4]</sup>，支持WebDav云备份<sup>[4][5]</sup>，阅读记录永不丢失</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎨 极致阅读体验</h3>
+                <p>全新视觉设计<sup>[3][4]</sup>，支持主题/字体/背景自定义<sup>[2][5]</sup>，夜间模式护眼阅读</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔍 全站内容搜索</h3>
+                <p>跨书源智能检索<sup>[4][5]</sup>，支持关键词/分类/作者多维筛选<sup>[1][2]</sup>，实时更新最新章节</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="download">
+        <div class="download-buttons">
+            <button class="btn-download" id="download-android">夸克网盘下载</button>
+            <button class="btn-download" id="webdav-guide">百度网盘下载</button>
+        </div>
+        <p style="text-align: center">版本号：3.24.11.22 | 更新时间：2025-03-22</p>
+    </section>
+
+    <footer style="background: #263238; color: white; padding: 2rem 0; margin-top: 3rem">
+        <div class="container">
+            <p>© 2025 悦读社区 | 基于开源阅读深度定制<sup></sup></p>
+            <p style="font-size: 0.9em">免责声明：本软件资源均来自网络，仅供个人学习交流使用，请于下载后24小时内删除<sup></sup></p>
+        </div>
+    </footer>
+
+    <script>
+        // 修复按钮跳转问题
+        document.addEventListener('DOMContentLoaded', function() {
+            // 安卓下载按钮
+            document.getElementById('download-android').addEventListener('click', function() {
+                window.location.href = 'https://pan.quark.cn/s/5c7a34866d36';
+            });
+
+            // WebDav指南按钮
+            document.getElementById('webdav-guide').addEventListener('click', function() {
+                window.open('https://pan.baidu.com/s/1FpGMo2FtfBNlXily4sl3Tg?pwd=h6ny', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
